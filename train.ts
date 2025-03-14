@@ -1,9 +1,30 @@
-//  ********************************   Task H     *****************************************
-const getPositive = (arr: number[]): string => {
-  return arr.filter((num) => num > 0).join("");
+//  ********************************   Task I     *****************************************
+const majorityElement = (arr: number[]) => {
+  let maxElement = 0;
+  let tempCount = 0;
+  let realCount = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        tempCount++;
+      }
+    }
+    if (tempCount > realCount) {
+      realCount = tempCount;
+      maxElement = arr[i];
+    }
+  }
+  return maxElement;
 };
 
-console.log(getPositive([1, -4, 2, -2, 3]));
+console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+
+//  ********************************   Task H     *****************************************
+// const getPositive = (arr: number[]): string => {
+//   return arr.filter((num) => num > 0).join("");
+// };
+
+// console.log(getPositive([1, -4, 2, -2, 3]));
 
 //  ********************************   Task G     *****************************************
 
