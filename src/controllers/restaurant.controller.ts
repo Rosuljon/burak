@@ -20,6 +20,14 @@ restaurantController.getLogin = (req: Request, res: Response) => {
     console.log("Error on Login:", error);
   }
 };
+restaurantController.processLogin = (req: Request, res: Response) => {
+  try {
+    console.log("Post Login");
+    res.send("Post Login");
+  } catch (error) {
+    console.log("Error on Login:", error);
+  }
+};
 restaurantController.getSignup = (req: Request, res: Response) => {
   try {
     console.log("Get Sign Up");
@@ -28,5 +36,12 @@ restaurantController.getSignup = (req: Request, res: Response) => {
     console.log("Error on Sign Up:", error);
   }
 };
-
+restaurantController.processSignup = (req: Request, res: Response) => {
+  try {
+    console.log("Get Sign Up");
+    res.send("process Sign up");
+  } catch (error) {
+    console.log("Error on Sign Up:", error);
+  }
+};
 export default restaurantController;
