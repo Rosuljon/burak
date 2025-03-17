@@ -1,23 +1,35 @@
-//  ********************************   Task I     *****************************************
-const majorityElement = (arr: number[]) => {
-  let maxElement = 0;
-  let tempCount = 0;
-  let realCount = 0;
+//  ********************************   Task J     *****************************************
+const findLongestWord = (word: string) => {
+  const arr = word.split(" ");
+  let longestWord = "";
   for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j < arr.length; j++) {
-      if (arr[i] === arr[j]) {
-        tempCount++;
-      }
-    }
-    if (tempCount > realCount) {
-      realCount = tempCount;
-      maxElement = arr[i];
-    }
+    if (arr[i].length > longestWord.length) longestWord = arr[i];
   }
-  return maxElement;
+  return longestWord;
 };
 
-console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
+console.log(findLongestWord("i came from Uzbekistan"));
+
+//  ********************************   Task I     *****************************************
+// const majorityElement = (arr: number[]) => {
+//   let maxElement = 0;
+//   let tempCount = 0;
+//   let realCount = 0;
+//   for (let i = 0; i < arr.length; i++) {
+//     for (let j = 0; j < arr.length; j++) {
+//       if (arr[i] === arr[j]) {
+//         tempCount++;
+//       }
+//     }
+//     if (tempCount > realCount) {
+//       realCount = tempCount;
+//       maxElement = arr[i];
+//     }
+//   }
+//   return maxElement;
+// };
+
+// console.log(majorityElement([1, 2, 3, 4, 5, 4, 3, 4]));
 
 //  ********************************   Task H     *****************************************
 // const getPositive = (arr: number[]): string => {
