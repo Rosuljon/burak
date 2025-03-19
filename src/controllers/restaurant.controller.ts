@@ -25,7 +25,6 @@ restaurantController.getLogin = (req: Request, res: Response) => {
 restaurantController.processLogin = async (req: Request, res: Response) => {
   try {
     console.log("Post Login");
-    console.log(req.body);
     const input: LoginInput = req.body;
     const memberService = new MemberService();
     const result = await memberService.processLogin(input);
