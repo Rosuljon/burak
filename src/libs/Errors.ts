@@ -15,6 +15,9 @@ export enum Message {
   CREATED_FAILED = "Create was failed",
   UPDATED_FAILED = "Update was failed",
   DELETED_FAILED = "Delete was failed",
+  USED_NICK_PHONE = "You are inserting already used nick or phone",
+  NO_MEMBER_NICK = "No member with that member nick",
+  WORONG_PASSWORD = "Wrong password, please try again",
 }
 
 class Errors extends Error {
