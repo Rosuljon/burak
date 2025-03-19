@@ -45,7 +45,7 @@ restaurantController.processSignup = async (req: Request, res: Response) => {
     const newMember: MemberInput = req.body;
     newMember.memberType = MemberType.RESTAURANT;
     const memberService = new MemberService();
-    const result = await memberService.processSignUp(newMember);
+    const result = await memberService.processSignup(newMember);
     res.send(result);
   } catch (error) {
     console.log("Error on Sign Up:", error);
