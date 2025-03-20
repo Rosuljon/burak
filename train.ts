@@ -1,14 +1,26 @@
-//  ********************************   Task J     *****************************************
-const findLongestWord = (word: string) => {
-  const arr = word.split(" ");
-  let longestWord = "";
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].length > longestWord.length) longestWord = arr[i];
+//  ********************************   Task H     *****************************************
+const getDigit = (word: string) => {
+  let length = word.length;
+  let numberedString = "";
+  for (let i = 0; i < length; i++) {
+    if (word[i] >= "0" && word[i] <= "9") numberedString += word[i];
   }
-  return longestWord;
+  return numberedString;
 };
 
-console.log(findLongestWord("i came from Uzbekistan"));
+console.log(getDigit("m24i1t"));
+
+//  ********************************   Task J     *****************************************
+// const findLongestWord = (word: string) => {
+//   const arr = word.split(" ");
+//   let longestWord = "";
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].length > longestWord.length) longestWord = arr[i];
+//   }
+//   return longestWord;
+// };
+
+// console.log(findLongestWord("i came from Uzbekistan"));
 
 //  ********************************   Task I     *****************************************
 // const majorityElement = (arr: number[]) => {
